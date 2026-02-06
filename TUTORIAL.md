@@ -126,7 +126,7 @@ export default function Home() {
 
 ## Step 4: Add the Main Card
 
-Below the navbar, add the light gray card:
+Below the navbar, add the light gray card. Notice we also update the outer div and nav classes:
 
 ```tsx
 export default function Home() {
@@ -153,10 +153,16 @@ export default function Home() {
 }
 ```
 
+**What changed from Step 3:**
+- Outer div: Added `flex flex-col items-center` to center the card
+- Nav: Changed `mx-auto` to `w-full` (the parent now handles centering)
+
 **New classes:**
 | Class | What it does |
 |-------|--------------|
 | `flex-col` | Stacks children vertically (navbar, then card) |
+| `items-center` | Centers children horizontally |
+| `w-full` | Makes navbar take full width of its container |
 | `bg-[#d9d9d9]` | Custom hex color (the `[]` lets you use any value) |
 | `rounded-3xl` | Very rounded corners |
 
@@ -174,8 +180,10 @@ Inside the main card, create a two-column layout:
   <section className="flex flex-col md:flex-row gap-12 px-12 py-16">
 
     {/* LEFT: Image */}
-    <div className="w-72 h-96 bg-[#c4c4c4] rounded-2xl">
-      Image placeholder
+    <div className="flex-shrink-0">
+      <div className="w-72 h-96 bg-[#c4c4c4] rounded-2xl">
+        Image placeholder
+      </div>
     </div>
 
     {/* RIGHT: Text content */}
@@ -193,6 +201,7 @@ Inside the main card, create a two-column layout:
 |-------|--------------|
 | `md:flex-row` | On medium+ screens, arrange side by side |
 | `flex-col` | On small screens, stack vertically |
+| `flex-shrink-0` | Prevents the image from shrinking when space is tight |
 | `w-72` | Fixed width (288px) |
 | `h-96` | Fixed height (384px) |
 | `px-12 py-16` | Padding inside the section |
@@ -246,20 +255,22 @@ Replace "Text goes here" with the heading, bio, and button:
 
 ```tsx
 {/* LEFT: Image */}
-<div className="w-72 h-96 rounded-2xl overflow-hidden">
-  <img 
-    src="/my-photo.png" 
-    alt="Profile" 
-    className="w-full h-full object-cover"
-  />
+<div className="flex-shrink-0">
+  <div className="w-72 h-96 bg-[#c4c4c4] rounded-2xl">
+    <img 
+      src="/my-photo.png" 
+      alt="Profile" 
+      className="w-full h-full object-cover rounded-2xl"
+    />
+  </div>
 </div>
 ```
 
 **Image classes:**
 | Class | What it does |
 |-------|--------------|
-| `overflow-hidden` | Clips the image to rounded corners |
 | `object-cover` | Scales image to fill, cropping if needed |
+| `rounded-2xl` | Rounds the image corners to match the container |
 
 ---
 

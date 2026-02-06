@@ -40,7 +40,7 @@ export default function Home() {
           {/* LEFT SIDE - IMAGE PLACEHOLDER */}
           <div className="flex-shrink-0">
             <div className="w-72 h-96 bg-[#c4c4c4] rounded-2xl border border-gray-400 flex items-center justify-center">
-              <img src="/scout-logo.png" alt="Profile" className="w-full h-full object-cover rounded-2xl" />
+              <img src="/zayj-retreat.JPG" alt="Profile" className="w-full h-full object-cover rounded-2xl" />
             </div>
           </div>
 
@@ -49,25 +49,35 @@ export default function Home() {
 
             {/* Heading */}
             <h1 className="text-black font-bold text-[5rem] font-['Iowan_Old_Style',Georgia,serif]">
-              Hello!
+              Yo!
             </h1>
 
             {/* Bio paragraph */}
             <p className="text-black max-w-lg leading-relaxed text-[1.375rem] font-[Inter,sans-serif]">
-              This is my portfolio!!!! I was born at a very young age,
-              every since my passion has been reciting all of Lorem Ipsum, from memory. Wanna hear? Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-               nulla pariatur. How was it? Amazing right?
+              I&apos;m Zaydaan, a third year Computer Science student at Northeastern University. 
+              <br />
+              <br />
+              I am Scout&apos;s Conference Tech Lead for Interventions: Entangle, check it out on March 22nd at ISEC!
+              <br />
+              <br />
+              Personal Favorites:
+              <br />
+              - Food: Sushi
+              <br />
+              - Movie: Blade Runner 2049
+              <br />
+              - Season: Summer!!!
+              <br />
+              - Hobby: Photography
+              <br />
             </p>
 
             {/* CTA Button */}
             <a
-              href="#"
+              href="https://www.linkedin.com/in/zaydaan/"
               className="inline-flex items-center gap-2 bg-[#5c5c5c] text-white px-8 py-4 rounded-full text-lg font-[Inter,sans-serif] hover:bg-[#4a4a4a] transition-colors w-fit"
             >
-              Learn more
+              LinkedIn
               <span aria-hidden="true">→</span>
             </a>
 
